@@ -11,8 +11,23 @@ Hints and QA theory for QA interviews
   * [Генераторы](/Python%20theory.md/#генераторы)
   * [Декораторы](/Python%20theory.md/#декораторы)
   * [Pytest](/Python%20theory.md/#pytest)
-    * [Фикстуры (Fixtures)](/Python%20theory.md/#фикстуры-(Fixtures))
+    * [Фикстуры (Fixtures)](/Python%20theory.md/#фикстуры-fixtures)
+  * [Классы](/Python%20theory.md/#классы-classes)
+    * [Модификаторы доступа](/Python%20theory.md/#модификаторы-доступа)
+    * [Magic методы](/Python%20theory.md/#magic-методы)
 * [Теория тестирования](/QA%20theory.md)
   * [Техники тест дизайна](/QA%20theory.md/#техники-тест-дизайна)
   * [Пирамида тестирования](/QA%20theory.md/#пирамида-тестирования)
   * [Виды тестирования](/QA%20theory.md/#виды-тестирования)
+
+## TODO
+* Docker
+* Базы данных
+* Многопоточность
+  * Multiprocessing
+  * threading
+  * asyncio
+* Класс
+  * Статичные методы
+  * Свойства (property)
+  * Наследование
