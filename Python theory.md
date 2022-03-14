@@ -211,3 +211,28 @@ class SomeClass:
     def static_method(): ...
 ```
 Статические методы могут вызываться без инициализации объекта класса и им не нужен аргумент `self`.
+
+### Свойства (Property)
+Свойства в классах позволяют получить атрибут, значение которого вычисляется динамически.
+
+Примеры объявления свойств:
+```python
+class SomeClass:
+    @property
+    def some_property(self): 
+        return ...
+```
+```python
+class SomeClass:
+    @property
+    def some_property(self):
+        return ...
+
+    @some_property.setter
+    def some_property(self, value):
+        ...
+    
+    @some_property.deleter
+    def some_property(self):
+        ...
+```
