@@ -23,10 +23,13 @@ Hints and QA theory for QA interviews
 ## TODO
 * Docker
 * Базы данных
-* Многопоточность
+* Асинхронный код
   * Multiprocessing
   * threading
   * asyncio
+* Pytest
+  * conftest
+  * marks
 * Класс
   * Статичные методы
   * Свойства (property)
