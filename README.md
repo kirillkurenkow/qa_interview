@@ -10,6 +10,8 @@ Hints and QA theory for QA interviews
   * [Изменяемые и неизменяемые типы данных](/Python%20theory.md/#изменяемые-и-неизменяемые-типы-данных)
   * [Генераторы](/Python%20theory.md/#генераторы)
   * [Декораторы](/Python%20theory.md/#декораторы)
+  * [Pytest](/Python%20theory.md/#pytest)
+    * [Фикстуры (Fixtures)](/Python%20theory.md/#фикстуры-(Fixtures))
 * [Теория тестирования](/QA%20theory.md)
   * [Техники тест дизайна](/QA%20theory.md/#техники-тест-дизайна)
   * [Пирамида тестирования](/QA%20theory.md/#пирамида-тестирования)
