@@ -196,3 +196,102 @@ CMD ["python", "./my_script.py"]
 
 ### Docker compose
 Docker Compose используется для одновременного управления несколькими контейнерами, входящими в состав приложения.
+
+## Базы данных
+Базы данных можно разделить на реляционные и нереляционные.\
+Данные реляционных баз хранятся в виде таблиц и строк. Нереляционные БД хранят неструктурированную информацию.
+
+Реляционные БД используют язык запросов - SQL (Structured Query Language).
+
+SQL подойдет, если нужна обработка большого количества сложных запросов, или рутинного анализа данных. \
+Выбирайте реляционную БД, если нужна надежная обработка транзакций и ссылочная целостность.
+
+Если объем данных большой, лучше использовать NoSQL. Отсутствие явных структурированных механизмов ускорит процесс обработки Big Data. \
+А еще это безопаснее - такие БД сложнее взломать.
+
+### Примеры запросов
+#### Выборка данных
+```
+SELECT column1, column2, ...
+FROM table_name
+WHERE {conditions}
+```
+#### Создание таблицы
+```
+CREATE TABLE table_name(
+    column1_name column1_datatype,
+    column2_name column2_datatype,
+    ...
+)
+PRIMARY KEY (column1_name, ...)
+```
+#### Изменение данных
+```
+UPDATE table_name
+SET column1 = {new_value}, column2 = {new_value}
+WHERE {condition}
+```
+#### Вставка данных
+```
+INSERT INTO table_name (column1, column2)
+VALUES (column1_value, column2_value)
+```
+#### Удаление данных
+```
+DELETE FROM table_name
+WHERE {condition}
+```
+### Виды JOIN'ов
+Инструкция Join позволяет объединить колонки из нескольких таблиц в одну.
+
+Типы JOIN-выражений:
+* INNER
+* OUTER
+  * LEFT
+  * RIGHT
+  * FULL
+* CROSS
+#### INNER JOIN
+INNER JOIN необходим для получения только тех строк, для которых существует соответствие записей главной таблицы и присоединяемой. \
+Иными словами условие condition должно выполняться всегда.
+
+Пример:
+```
+SELECT *
+FROM table1 INNER JOIN table2 ON table1.column = table2.column
+```
+#### LEFT JOIN
+В случае с LEFT JOIN из главной таблицы будут выбраны все записи, даже если в присоединяемой таблице нет совпадений, \
+то есть условие condition не учитывает присоединяемую (правую) таблицу. 
+
+Пример:
+```
+SELECT *
+FROM table1 LEFT JOIN table2 ON table1.column = table2.column
+```
+
+#### RIGHT JOIN
+Right join отображает все строки удовлетворяющие правой части условия condition, даже если они не имеют соответствия в главной (левой) таблице
+
+Пример:
+```
+SELECT *
+FROM table1 RIGHT JOIN table2 ON table1.column = table2.column
+```
+
+#### FULL JOIN
+Необходим для отображения всех возможных комбинаций строк из нескольких таблиц. \
+Иными словами, это объединение результатов LEFT и RIGHT JOIN.
+
+Пример:
+```
+SELECT *
+FROM table1 FULL JOIN table2 ON table1.column = table2.column
+```
+#### CROSS JOIN
+Пример:
+
+```
+SELECT table1.column, table2.column
+FROM table1, table2
+```

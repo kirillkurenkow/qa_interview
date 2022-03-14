@@ -27,8 +27,6 @@ Hints and QA theory for QA interviews
   * [Виды тестирования](/QA%20theory.md/#виды-тестирования)
 
 ## TODO
-* Docker
-* Базы данных
 * REST API
 * JRPC 
 * Асинхронный код
