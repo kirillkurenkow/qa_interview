@@ -25,14 +25,20 @@ Hints and QA theory for QA interviews
   * [Изменяемые и неизменяемые типы данных](/Python%20theory.md/#изменяемые-и-неизменяемые-типы-данных)
   * [Генераторы](/Python%20theory.md/#генераторы)
   * [Декораторы](/Python%20theory.md/#декораторы)
-  * [Pytest](/Python%20theory.md/#pytest)
-    * [Фикстуры (Fixtures)](/Python%20theory.md/#фикстуры-fixtures)
   * [Классы](/Python%20theory.md/#классы-classes)
     * [Модификаторы доступа](/Python%20theory.md/#модификаторы-доступа)
     * [Magic методы](/Python%20theory.md/#magic-методы)
     * [Статические методы](/Python%20theory.md/#статические-методы)
     * [Свойства (Property)](/Python%20theory.md/#свойства-property)
     * [Наследование](/Python%20theory.md/#наследование)
+  * [Асинхронный код](/Python%20theory.md/#асинхронный-код)
+    * [Multiprocessing](/Python%20theory.md/#multiprocessing)
+    * [Threading](/Python%20theory.md/#threading)
+    * [AsyncIO](/Python%20theory.md/#asyncio)
+  * [Pytest](/Python%20theory.md/#pytest)
+    * [Фикстуры (Fixtures)](/Python%20theory.md/#фикстуры-fixtures)
+    * [Marks](/Python%20theory.md/#marks)
+    * [Conftest](/Python%20theory.md/#conftest)
 
 * [Теория тестирования](/QA%20theory.md)
   * [Техники тест дизайна](/QA%20theory.md/#техники-тест-дизайна)
@@ -40,10 +46,5 @@ Hints and QA theory for QA interviews
   * [Виды тестирования](/QA%20theory.md/#виды-тестирования)
 
 ## TODO
-* Асинхронный код
-  * Multiprocessing
-  * threading
-  * asyncio
-* Pytest
-  * conftest
-  * marks
+* Рефактор Python theory
+* Рефактор QA theory
