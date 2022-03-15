@@ -302,7 +302,6 @@ class Truck(Car):
         super().__init__(wheels_count=6)
 ```
 
-
 ## Асинхронный код
 <b>Python Global Interpreter Lock (GIL)</b> — это своеобразная блокировка, позволяющая только одному потоку управлять интерпретатором Python. Это означает, что в любой момент времени будет выполняться только один конкретный поток.
 
@@ -380,4 +379,78 @@ async def main():
 
 
 asyncio.run(main())
+```
+
+
+## Pytest
+### Marks
+Чтобы использовать кастомные теги надо добавить их в `pytest.ini`
+```ini
+[pytest]
+markers=
+    mark1: mark for tests ...
+    mark2: mark for other tests ...
+```
+```python
+import pytest
+
+
+@pytest.mark.mark1
+def some_test(): ...
+```
+Чтобы запустить тесты с определенными тегами нужно использовать аргумент `-m`:
+```shell
+pytest -m mark1
+```
+```shell
+pytest -m "mark1 AND mark2"
+```
+```shell
+pytest -m "not mark1"
+```
+#### mark.parametrize
+Используется для параметризации тестов
+```python
+import pytest
+
+
+@pytest.mark.parametrize('param1, param2', [
+    (1, 1),
+    (2, 2),
+    (3, 3)
+])
+def test_1(param1, param2):
+    ...
+
+
+@pytest.mark.parametrize('param', list(range(10)))
+def test_2(param):
+    ...
+
+
+@pytest.mark.parametrize('param1', [1, 2, 3])
+@pytest.mark.parametrize('param2', [1, 2, 3])
+def test_3(param1, param2):
+    ...
+```
+
+#### mark.skip
+Используется, чтобы пропускать (не запускать) тесты
+```python
+import pytest
+
+
+@pytest.mark.skip(reason='Have to skip')
+def test_1():
+    ...
+```
+#### mark.xfail
+Используется, когда ожидается, что тест должен завершиться с ошибкой
+```python
+import pytest
+
+
+@pytest.mark.xfail(raises=AssertionError)
+def test_1():
+    raise AssertionError
 ```
