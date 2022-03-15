@@ -232,13 +232,13 @@ SQL подойдет, если нужна обработка большого к
 
 ### Примеры запросов
 #### Выборка данных
-```
+```sql
 SELECT column1, column2, ...
 FROM table_name
 WHERE {conditions}
 ```
 #### Создание таблицы
-```
+```sql
 CREATE TABLE table_name(
     column1_name column1_datatype,
     column2_name column2_datatype,
@@ -247,21 +247,22 @@ CREATE TABLE table_name(
 PRIMARY KEY (column1_name, ...)
 ```
 #### Изменение данных
-```
+```sql
 UPDATE table_name
 SET column1 = {new_value}, column2 = {new_value}
 WHERE {condition}
 ```
 #### Вставка данных
-```
+```sql
 INSERT INTO table_name (column1, column2)
 VALUES (column1_value, column2_value)
 ```
 #### Удаление данных
-```
+```sql
 DELETE FROM table_name
 WHERE {condition}
 ```
+
 ### Виды JOIN'ов
 Инструкция Join позволяет объединить колонки из нескольких таблиц в одну.
 
@@ -277,7 +278,7 @@ INNER JOIN необходим для получения только тех ст
 Иными словами условие condition должно выполняться всегда.
 
 Пример:
-```
+```sql
 SELECT *
 FROM table1 INNER JOIN table2 ON table1.column = table2.column
 ```
@@ -286,7 +287,7 @@ FROM table1 INNER JOIN table2 ON table1.column = table2.column
 то есть условие condition не учитывает присоединяемую (правую) таблицу. 
 
 Пример:
-```
+```sql
 SELECT *
 FROM table1 LEFT JOIN table2 ON table1.column = table2.column
 ```
@@ -295,7 +296,7 @@ FROM table1 LEFT JOIN table2 ON table1.column = table2.column
 Right join отображает все строки удовлетворяющие правой части условия condition, даже если они не имеют соответствия в главной (левой) таблице
 
 Пример:
-```
+```sql
 SELECT *
 FROM table1 RIGHT JOIN table2 ON table1.column = table2.column
 ```
@@ -305,14 +306,14 @@ FROM table1 RIGHT JOIN table2 ON table1.column = table2.column
 Иными словами, это объединение результатов LEFT и RIGHT JOIN.
 
 Пример:
-```
+```sql
 SELECT *
 FROM table1 FULL JOIN table2 ON table1.column = table2.column
 ```
 #### CROSS JOIN
 Пример:
 
-```
+```sql
 SELECT table1.column, table2.column
 FROM table1, table2
 ```
