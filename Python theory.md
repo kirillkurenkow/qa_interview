@@ -301,3 +301,83 @@ class Truck(Car):
     def __init__(self):
         super().__init__(wheels_count=6)
 ```
+
+
+## Асинхронный код
+<b>Python Global Interpreter Lock (GIL)</b> — это своеобразная блокировка, позволяющая только одному потоку управлять интерпретатором Python. Это означает, что в любой момент времени будет выполняться только один конкретный поток.
+
+#### Когда использовать multiprocessing, asyncio или threading
+1. Используйте многопроцессорность (multiprocessing), когда вам нужно выполнить много тяжелых вычислений, и вы можете их разделить.
+2. Используйте asyncio или многопоточность(threading), когда вы выполняете операции ввода-вывода - общение с внешними ресурсами или чтение/запись из/в файлы.
+3. Многопроцессорность и asyncio можно использовать вместе, но хорошее практическое правило состоит в том, чтобы разветвлять процесс перед потоком/использованием asyncio, а не наоборот - потоки относительно дешевы по сравнению с процессами.
+
+### Multiprocessing
+Пример:
+```python
+import multiprocessing
+
+
+def some_func(): ...
+
+
+processes = []
+for _ in range(5):
+    process = multiprocessing.Process(
+        target=some_func,
+        args=(),
+        kwargs={},
+    )
+    process.start()
+    processes.append(process)
+
+for process in processes:
+    process.join()
+```
+
+### Threading
+<b>Поток</b> - это способ позволить вашему компьютеру разбить отдельный процесс/программу на множество легковесных частей, которые выполняются параллельно.
+
+Потоки в Python являются конкурентными, но не параллельными из-за GIL.
+
+Пример:
+```python
+import threading
+
+
+def some_func(): ...
+
+
+threads = []
+for _ in range(5):
+    thread = threading.Thread(
+        target=some_func,
+        args=[],
+        kwargs={},
+    )
+    thread.start()
+    threads.append(thread)
+
+for thread in threads:
+    thread.join()
+```
+### AsyncIO
+Пример:
+```python
+import asyncio
+import aiofile
+
+
+async def create_file(filename: str):
+    async with aiofile.async_open(filename, mode='w') as file:
+        await file.write(filename * 30)
+
+
+async def main():
+    tasks = []
+    for i in range(5):
+        tasks.append(create_file(filename=f'test{i}.txt'))
+    await asyncio.gather(*tasks)
+
+
+asyncio.run(main())
+```
