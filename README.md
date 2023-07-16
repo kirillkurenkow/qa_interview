@@ -82,8 +82,17 @@
 * [Linux](/Linux.md)
   * Основные команды
 * [SQL](/SQL.md)
-  * Виды запросов
-  * Воды JOIN'ов
+  * [Примеры запросов](/SQL.md/#примеры-запросов)
+    * [SELECT](/SQL.md/#select)
+    * [UPDATE](/SQL.md/#update)
+    * [DELETE](/SQL.md/#delete)
+    * [INSERT](/SQL.md/#insert)
+    * [CREATE TABLE](/SQL.md/#create-table)
+    * [DROP TABLE](/SQL.md/#drop-table)
+  * [JOINы](/SQL.md/#joinы)
+    * [Inner join](/SQL.md/#inner-join)
+    * [Left и right join](/SQL.md/#left-и-right-join)
+    * [Full join](/SQL.md/#full-join)
 * [Network](/Network.md)
   * [Модель OSI](/Network.md/#модель-osi)
   * [Протоколы](/Network.md/#протоколы)
