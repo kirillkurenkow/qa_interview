@@ -22,13 +22,16 @@
       * [Декораторы](/Python/Базовые%20вопросы.md/#декораторы)
         * [Декораторы с аргументами](/Python/Базовые%20вопросы.md/#декораторы-с-аргументами)
         * [`functools.wraps`](/Python/Базовые%20вопросы.md/#functoolswraps)
-      * lru_cache
     * [Исключения](/Python/Базовые%20вопросы.md/#исключения)
       * [Дерево исключений](/Python/Базовые%20вопросы.md/#дерево-исключений)
     * [Варианты форматирования строк](/Python/Базовые%20вопросы.md/#варианты-форматирования-строк)
       * [Форматирование с помощью оператора `%`](/Python/Базовые%20вопросы.md/#форматирование-с-помощью-оператора-)
       * [Форматирование с помощью метода `str.format()`](/Python/Базовые%20вопросы.md/#форматирование-с-помощью-метода-strformat)
       * [Форматирование с помощью f-строк](/Python/Базовые%20вопросы.md/#форматирование-с-помощью-f-строк)
+    * Параллельный код
+      * asyncio
+      * threading
+      * multiprocessing
   * [ООП](/Python/ООП.md)
     * [Magic или dunder методы](/Python/ООП.md/#magic-или-dunder-методы)
       * [Методы для инициализации и конструктора](/Python/ООП.md/#методы-для-инициализации-и-конструктора)
@@ -39,21 +42,53 @@
       * [Строковые методы](/Python/ООП.md/#строковые-методы)
       * [Методы атрибутов](/Python/ООП.md/#методы-атрибутов)
       * [Методы математических операторов](/Python/ООП.md/#методы-математических-операторов)
-    * Классы
-      * MRO и наследование
-      * Миксины (Mixin)
-      * Функция `super`
-      * Метаклассы
-        * Как работают
-        * Зачем использовать
+    * [MRO и наследование](/Python/ООП.md/#mro-и-наследование)
+      * [Функция `super`](/Python/ООП.md/#функция-super)
+    * [Миксины (Mixin)](/Python/ООП.md/миксины-mixin)
+    * [property](/Python/ООП.md/#property)
+    * [Метаклассы](/Python/ООП.md/#метаклассы)
+      * [Как работают](/Python/ООП.md/#как-работают)
+      * [Зачем использовать](/Python/ООП.md/#зачем-использовать)
   * [Модули](/Python/Модули.md)
-    * Что такое модуль
-    * Что такое пакет
-    * Как происходит поиск модулей при импорте
+    * [Что такое модуль](/Python/Модули.md/#что-такое-модуль)
+    * [Что такое пакет](/Python/Модули.md/#что-такое-пакет)
+    * [Как происходит поиск модулей при импорте](/Python/Модули.md/#как-происходит-поиск-модулей-при-импорте)
     * PyTest
+      * conftest
+      * fixture
     * Selenium
     * collections
+      * namedtuple
+      * defaultdict
+      * OrderedDict
+      * Counter
+      * ChainMap
+      * deque
     * itertools
+      * count
+      * cycle
+      * repeat
+      * starmap
+      * accumulate
+      * dropwhile
+      * takewhile
+      * filterfalse
+      * compress
+      * islice
+      * chain
+      * zip_longest
+      * tee
+      * pairwise
+      * groupby
+      * permutations
+      * combinations
+      * combinations_with_replacement
+      * product
+    * functools
+      * cache
+      * lru_cache
+      * partial
+      * wraps
     * re
     * requests
     * csv
@@ -97,7 +132,30 @@
     * [git revert](/GIT.md/#git-revert)
     * [git grep](/GIT.md/#git-grep)
 * [Linux](/Linux.md)
-  * Основные команды
+  * [Основные команды](/Linux.md/#основные-команды)
+    * [cd](/Linux.md/#cd)
+    * [clear](/Linux.md/#clear)
+    * [history](/Linux.md/#history)
+    * [man](/Linux.md/#man)
+    * [sudo](/Linux.md/#sudo)
+    * [sudo su](/Linux.md/#sudo-su)
+    * sudo !!
+    * [kill](/Linux.md/#kill)
+    * [killall](/Linux.md/#killall)
+    * [top](/Linux.md/#top)
+    * [cat](/Linux.md/#cat)
+    * [chmod](/Linux.md/#chmod)
+    * [chown](/Linux.md/#chown)
+    * [file](/Linux.md/#file)
+    * [nano](/Linux.md/#nano)
+    * [rename](/Linux.md/#rename)
+    * [touch](/Linux.md/#touch)
+    * [mkdir](/Linux.md/#mkdir)
+    * [rmdir](/Linux.md/#rmdir)
+    * [rm](/Linux.md/#rm)
+    * [cp](/Linux.md/#cp)
+    * [mv](/Linux.md/#mv)
+    * [grep](/Linux.md/#grep)
 * [SQL](/SQL.md)
   * [Примеры запросов](/SQL.md/#примеры-запросов)
     * [SELECT](/SQL.md/#select)
